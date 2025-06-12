@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { counterAtom } from "../App";
+import { counterAtom } from "../atoms";
 
 function Counter() {
   const [_, setCount] = useAtom(counterAtom);

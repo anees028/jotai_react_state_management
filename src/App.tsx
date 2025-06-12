@@ -1,8 +1,9 @@
-import { atom, useAtom } from 'jotai'
+import { useAtom } from 'jotai'
 import './App.css'
 import Counter from './components/Counter';
+import DoubleCounter from './components/DoubleCounter';
+import { counterAtom } from './atoms';
 
-export const counterAtom = atom(0)
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <div className="card">
         <h3>{count}</h3>
         <Counter />
+        <DoubleCounter />
       </div>
     </>
   )
