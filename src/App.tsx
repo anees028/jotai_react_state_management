@@ -1,11 +1,12 @@
 import { atom, useAtom } from 'jotai'
 import './App.css'
+import Counter from './components/Counter';
 
 export const counterAtom = atom(0)
 
 function App() {
 
-  const [count, setCount] = useAtom(counterAtom);
+  const [count] = useAtom(counterAtom);
 
   return (
     <>
@@ -13,8 +14,7 @@ function App() {
       <h3>Counter Application :)</h3>
       <div className="card">
         <h3>{count}</h3>
-        <button onClick={()=> setCount((prev) => prev + 1)}>Increment</button>
-        <button onClick={()=> setCount((prev) => prev - 1)}>Decrement</button>
+        <Counter />
       </div>
     </>
   )
